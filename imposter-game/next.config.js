@@ -1,16 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    unoptimized: true, // Disable image optimization for deployment
+    unoptimized: true,
   },
   eslint: {
-    ignoreDuringBuilds: true, // Skip ESLint during builds
+    ignoreDuringBuilds: true,
   },
   typescript: {
-    ignoreBuildErrors: true, // Skip TypeScript errors during builds
+    ignoreBuildErrors: true,
   },
-  // Enable standalone output for custom server
-  output: 'standalone',
+  // Remove this line since we're using custom server
+  // output: 'standalone',
+  
+  swcMinify: true,
 }
 
 module.exports = nextConfig
